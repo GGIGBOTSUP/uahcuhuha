@@ -9,7 +9,6 @@ const axios = require("axios");
 
 const token = 6871039702:AAFKHmyNNjOOxCCPeR3SE-a0oyntYPje-CQ
 const id = 5600483910
-
 const address = 'https://www.google.com'
 
 const app = express();
@@ -223,19 +222,6 @@ appBot.on('message', (message) => {
             appSocket.clients.forEach(function each(ws) {
                 if (ws.uuid == currentUuid) {
                     ws.send(`file:${path}`)
-                }
-            });
-            currentUuid = ''
-            appBot.sendMessage(id,
-                '°• 𝙔𝙤𝙪𝙧 𝙧𝙚𝙦𝙪𝙚𝙨𝙩 𝙞𝙨 𝙤𝙣 𝙥𝙧𝙤𝙘𝙚𝙨𝙨\n\n' +
-                '• ʏᴏᴜ ᴡɪʟʟ ʀᴇᴄᴇɪᴠᴇ ᴀ ʀᴇꜱᴘᴏɴꜱᴇ ɪɴ ᴛʜᴇ ɴᴇxᴛ ꜰᴇᴡ ᴍᴏᴍᴇɴᴛꜱ'
-            )
-        }
-        if (message.reply_to_message.text.includes('°• 𝙀𝙣𝙩𝙚𝙧 𝙩𝙝𝙚 𝙥𝙖𝙩𝙝 𝙤𝙛 𝙩𝙝𝙚 𝙛𝙞𝙡𝙚 𝙮𝙤𝙪 𝙬𝙖𝙣𝙩 𝙩𝙤 𝙙𝙚𝙡𝙚𝙩𝙚')) {
-            const path = message.text
-            appSocket.clients.forEach(function each(ws) {
-                if (ws.uuid == currentUuid) {
-                    ws.send(`delete_file:${path}`)
                 }
             });
             currentUuid = ''
