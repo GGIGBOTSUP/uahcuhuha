@@ -2,7 +2,7 @@
   "name": "dogerat",
   "version": "1.0.0",
   "description": "",
-  "main": "server3.js",
+  "main": "server2.js",
   "engines": {
     "node": "16.13.2"
   },
